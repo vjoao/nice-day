@@ -1,0 +1,118 @@
+// CopyRight https://codepen.io/noahblon/pres/lxukH
+
+$baseAnimationDuration: 18s;
+$size: 150px;
+$svgSize: 120px;
+
+$backgroundColor: skyblue;
+$fontColor: white;
+$strokeColor: white;
+$fillColor: #aedef4;
+
+$strokeStrokeWidth: 0%;
+$strokeStrokeColor: black;
+$fillStrokeWidth: 0%;
+$fillStrokeColor: black;
+
+svg {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  shape-rendering: geometricPrecision;
+}
+
+g, path, circle, rect {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+  animation-duration: $baseAnimationDuration;
+  animation-direction: normal;
+}
+
+.icon-thermometer {
+  transform: scale(0.6);
+  animation-name: rotateInOut;
+  animation-duration: $baseAnimationDuration / 12;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.climacon_component-stroke {
+  fill: $strokeColor;
+  stroke-width: $strokeStrokeWidth;
+  stroke: $strokeStrokeColor;
+}
+
+.climacon_component-fill {
+  fill: $fillColor;
+  stroke-width: $fillStrokeWidth;
+  stroke: $fillStrokeColor;
+}
+
+.climacon_component-stroke_drizzle {
+  fill-opacity: 0;
+  animation-name: drizzleFall, fillOpacity2;
+  animation-timing-function: ease-in;
+  animation-duration: $baseAnimationDuration / 12;
+}
+
+@for $i from 1 through 3 {
+  .climacon_component-stroke_drizzle:nth-child(#{$i}) {
+    animation-delay: $baseAnimationDuration * 0.05 * $i - $baseAnimationDuration * 0.05;
+  }
+}
+
+.climacon_componentWrap-wind {
+  animation-name: translateWind;
+  animation-duration: $baseAnimationDuration / 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fillOpacity2 {
+  0% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+  50% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+
+@keyframes drizzleFall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY($svgSize * 0.3);
+  }
+}
+
+@keyframes rotateInOut {
+  0% {
+    transform: rotate(8deg) scale(0.6);
+  }
+  100% {
+    transform: rotate(-8deg) scale(0.7);
+  }
+}
+
+@keyframes translateWind {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateX($svgSize * 0.0714);
+  }
+  75% {
+    transform: translateX(-$svgSize * 0.0714);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
