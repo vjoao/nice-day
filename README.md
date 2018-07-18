@@ -1,4 +1,8 @@
 ## NiceDay
+
+Demo:
+https://vjoao.github.io/nice-day/
+
 A Vue.js powered application to check if the weather is nice on your location
 It uses a free version of the DarkSky API (forecast.io) that is behind a proxy because DarkSky disabled CORS.
 
