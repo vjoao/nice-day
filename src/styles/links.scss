@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+  &:link {
+    color: $primary;
+  }
+  &:visited {
+    color: $primary;
+  }
+  &:hover {
+    color: darken($primary, 16);
+  }
+  &:active {
+    color: $primary;
+  }
+}
