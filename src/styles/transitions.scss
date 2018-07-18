@@ -1,0 +1,20 @@
+.slide-fade-enter {
+  transform: translateX(-32px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: .15s all ease;
+}
+
+.slide-fade-enter-to {
+  transform: translateX(0);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(32px);
+  opacity: 0;
+}

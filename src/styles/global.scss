@@ -1,0 +1,55 @@
+@import './variables';
+@import './links';
+@import './animated-svgs';
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  font-family: 'Zilla Slab', serif;
+  letter-spacing: 0.1em;
+}
+
+.is-primary {
+  color: $primary
+}
+
+.is-error {
+  color: $error!important
+}
+
+.is-light {
+  color: $light
+}
+
+.is-muted {
+  color: $muted
+}
+
+.is-big {
+  font-size: 3em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
