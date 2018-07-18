@@ -1,0 +1,6 @@
+export const SET_ADDRESS = 'SET_ADDRESS'
+export const SET_BG = 'SET_BG'
+export const SET_ERROR = 'SET_ERROR'
+export const SET_POSITION = 'SET_POSITION'
+export const SET_PREFERENCES = 'SET_PREFERENCES'
+export const UPDATE_WEATHER = 'UPDATE_WEATHER'
