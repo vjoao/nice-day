@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "deploy": "npm run build && git add . && git commit -m \"Update gh-pages\" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "axios": "^0.18.0",
