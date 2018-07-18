@@ -18,3 +18,9 @@ To build and deploy to your serve:
 ```
 yarn build
 ```
+
+## TODO
+
+  * [ ] Automated testing
+  * [ ] Use backup forecast data sources
+  * [ ] Code cleanup
