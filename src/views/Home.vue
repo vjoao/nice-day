@@ -7,7 +7,6 @@
     <main class="content text-center">
       <h1 class="is-light text-center">Hello there!</h1>
       <div class="location is-light">
-        <svg-icon name="location"></svg-icon>
         <h3> {{ position.address }} </h3>
       </div>
       <h2 class="is-light text-center" v-if="!loading" :class="{ 'is-error': error }">{{ weatherMessage }}</h2>

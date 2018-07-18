@@ -27,8 +27,6 @@ export default {
         temperatureMax,
         windSpeed
       })
-
-      commit('auth/SET_API_KEY', preferences.apiKey, { root: true })
     }
   },
   getters: {
