@@ -1,4 +1,7 @@
 module.exports = {
+  baseUrl: process.env.NODE_ENV === 'production'
+    ? '/firestore-explorer/'
+    : '/',
   chainWebpack: config => {
     config.module.rules.delete("svg");
   },
